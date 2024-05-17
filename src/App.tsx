@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 
 import ButtonComponent from "./components/ButtonComponent";
@@ -6,7 +7,7 @@ import Counter from "./components/Counter";
 import "./App.css";
 
 function App() {
-  const [valor, setValor] = useState(0);
+  const [valor, setValor] = useState<number>(0);
 
   return (
     <div>
