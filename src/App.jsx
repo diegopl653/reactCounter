@@ -1,19 +1,31 @@
 import { useState } from "react";
+
+import ButtonComponent from "./components/ButtonComponent";
+import Counter from "./components/Counter";
+
 import "./App.css";
 
 function App() {
   const [valor, setValor] = useState(0);
-  
 
   return (
-    <>
-    <div className="container">
-      <button className="btn" onClick={() => setValor(valor+1)}>Sumar</button>
-      <p>{valor}</p>
-      <button className="btn" onClick={() => setValor(valor-1)}>Restar</button>
+    <div>
+      <div className="container">
+        <ButtonComponent
+          label="Sumar"
+          onClick={() => setValor(valor + 1)}
+        ></ButtonComponent>
+        <Counter value={valor}></Counter>
+        <ButtonComponent
+          label="Restar"
+          onClick={() => setValor(valor - 1)}
+        ></ButtonComponent>
+      </div>
+      <ButtonComponent
+        label="Reset"
+        onClick={() => setValor(0)}
+      ></ButtonComponent>
     </div>
-      <button className="btn" onClick={() => setValor(0)}>Reset</button>
-    </>
   );
 }
 
