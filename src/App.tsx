@@ -11,6 +11,17 @@ function App() {
 
   return (
     <div>
+      <form action="" className="form">
+      <label htmlFor="number">Ingresa un numero(OPCIONAL):</label>
+      <input
+        type="number"
+        id="number"
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+          const val = Number(e.target.value);
+          setValor(val);
+        }}
+      />
+      </form>
       <div className="container">
         <ButtonComponent
           label="Sumar"
@@ -22,10 +33,12 @@ function App() {
           onClick={() => setValor(valor - 1)}
         ></ButtonComponent>
       </div>
-      <ButtonComponent
-        label="Reset"
-        onClick={() => setValor(0)}
-      ></ButtonComponent>
+      {valor !== 0 && (
+        <ButtonComponent
+          label="Reset"
+          onClick={() => setValor(0)}
+        ></ButtonComponent>
+      )}
     </div>
   );
 }

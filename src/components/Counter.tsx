@@ -5,7 +5,7 @@ interface Props {
 
 function Counter(props: Props) {
   return (
-    <div>{props.value}</div>
+    <div className="counter">{props.value}</div>
   )
 }
 
