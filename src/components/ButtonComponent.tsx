@@ -9,6 +9,6 @@ const ButtonComponent = ( props : Props) => {
       {props.label}
     </button>
   );
-};
+};  
 
 export default ButtonComponent;
