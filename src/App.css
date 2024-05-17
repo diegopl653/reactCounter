@@ -4,3 +4,16 @@
   padding: 2rem;
   text-align: center;
 }
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
